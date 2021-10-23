@@ -6,8 +6,15 @@
  * */
 package za.ac.cput.Entity;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class User {
-    private String userId, firstName, lastName;
+
+    @Id
+    private String userId;
+    private String firstName, lastName;
 
     private User(Builder builder){
         this.userId = builder.userId;
